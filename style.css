@@ -1,0 +1,111 @@
+:root{
+    /* Colors */
+
+    --clr-Moderate-violet: hsl(263, 55%, 52%);
+    --clr-Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --clr-Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --clr-White: hsl(0, 0%, 100%);
+
+    --clr-Light-gray: hsl(0, 0%, 81%);
+    --clr-Light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* Font Sizes */
+
+    --fs-small: 1rem;
+    --fs-med: 1.5rem;
+    --fs-big: 2rem;
+
+    /* Font Weights */
+
+    --fw-min: 500;
+    --fw-ok:600;
+    --fw-bold:800;
+
+    /* padding */
+
+    --padding-init:1.5rem;
+    --padding-more:2.5rem;
+    --padding-extra:3.5rem;
+
+    /* Margin */
+
+    --margin-init:1.5rem;
+    --margin-more:2.5rem;
+    --margin-extra:3.5rem;
+
+    /* Gaps */
+
+    --gap-min:1.5rem;
+    --gap-more:2.5rem;
+
+    /* Border-Radius */
+
+    --br-min:0.5rem;
+    --br-ok:1rem;
+
+}
+*{
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed";
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+
+/* Box Styling */
+.box{
+    border-radius:var(--br-min) ;
+    padding: var(--padding-init);
+    margin-inline:var(--margin-init) ;
+    box-shadow: 1px 3px 15px 4px rgba(0, 0, 0, 0.2);
+}
+.box-1{
+    background-color: var(--clr-Moderate-violet);
+    margin-top: var(--margin-init);
+    
+}
+.box-2{
+    background-color: var(--clr-Very-dark-grayish-blue);
+}
+
+.box-3{
+    background-color: var(--clr-White);
+}
+
+.box-4{
+    background-color: var(--clr-Very-dark-blackish-blue);
+}
+
+.box-5{
+    background-color:var(--clr-White);
+    margin-bottom: var(--margin-init);
+}
+/* Grid Flow */
+.grid-flow{
+    display: grid;
+    gap: var(--gap-min);
+}
+/* Flex-Flow For Profile  */
+.flex-flow{
+    display: flex;
+    align-items: center;
+}
+.profile-flex{
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin-init);
+}
+/* Container Styling */
+.container{
+    display: grid;
+    gap: var(--gap-min);
+}
+/* Text Styling */
+.main-text{
+    font-size: var(--fs-big);
+    font-weight:var(--fw-ok);
+}
+.box-1>.main-text{
+    color: var(--clr-White);
+}
