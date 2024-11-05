@@ -43,6 +43,12 @@
     --br-min:0.5rem;
     --br-ok:1rem;
 
+    /* Line Heights */
+    --lh-init:1rem;
+    --lh-min:1.5em;
+    --lh-ok:2rem;
+    --lh-med:2.5rem;
+
 }
 *{
     box-sizing: border-box;
@@ -79,7 +85,7 @@ body{
 
 .box-5{
     background-color:var(--clr-White);
-    margin-bottom: var(--margin-init);
+    /* margin-bottom: var(--margin-init); */
 }
 /* Grid Flow */
 .grid-flow{
@@ -103,9 +109,87 @@ body{
 }
 /* Text Styling */
 .main-text{
-    font-size: var(--fs-big);
+    font-size: var(--fs-med);
     font-weight:var(--fw-ok);
 }
-.box-1>.main-text{
+.box-1>.main-text,.box-2>.main-text,.box-4>.main-text{
     color: var(--clr-White);
+}
+.box-3>.main-text,.box-5>.main-text{
+    color: var(--clr-Very-dark-grayish-blue);
+}
+.text{
+    color: var(--clr-Light-gray);
+    font-weight: var(--fw-min);
+    line-height: var(--lh-min) ;
+}
+.text-3,.text-5{
+    color:  rgb(112, 114, 117,0.8);
+    font-weight: var(--fw-min);
+}
+/* Styling Profile Picture */
+.profile-pic{
+    border-radius: 50%;
+}
+.pic-1{
+    border: 5px solid #ffffff47;
+}
+.pic-4{
+    border: 5px solid blueviolet;
+}
+.name{
+    color: var(--clr-White);
+    font-size: var(--fs-med);
+    font-weight: var(--fw-ok);
+}
+.name-3,.name-5{
+    color: var(--clr-Very-dark-grayish-blue);
+    font-size: var(--fs-med);
+    font-weight: var(--fw-ok);
+}
+.bio{
+    color: var(--clr-Light-gray);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-min);
+}
+@media (min-width:1200px){
+    section{
+      
+        display: grid;
+        place-items: center;
+        margin-inline: auto;
+        margin-bottom: var(--margin-init);
+    }
+    .container{
+        display: grid;
+        margin-inline:var(--margin-init) ;
+        grid-template-columns: repeat(4,1fr);
+       
+    }
+    .box{
+        margin-inline:0 ;
+    }
+    .box-1{
+      grid-column-start: span 2;
+    }
+    .box-2{
+        margin-top: var(--margin-init);
+        grid-column-start: span 1;
+    }
+    .box-3{
+        margin-top: var(--margin-init);
+        grid-column-start: 1;
+        grid-row-start: 2 ;
+    }
+    .box-4{
+        margin-top: var(--margin-init);
+        grid-column-start: span 2;
+    }
+    .box-5{
+        margin-top: var(--margin-init);
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
 }
